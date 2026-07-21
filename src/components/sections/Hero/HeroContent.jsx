@@ -13,18 +13,13 @@ const HeroContent = () => {
       </h1>
 
       <p>
-        Lychee Media helps businesses grow with
-        creative branding, websites, social media,
-        SEO, and performance marketing.
+        Lychee Media helps businesses grow with creative branding, websites,
+        social media, SEO, and performance marketing.
       </p>
 
       <div className={styles.buttons}>
         <button className={styles.primaryBtn}>
           Get Started
-        </button>
-
-        <button className={styles.secondaryBtn}>
-          View Portfolio
         </button>
       </div>
     </div>
