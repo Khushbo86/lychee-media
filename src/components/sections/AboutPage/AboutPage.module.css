@@ -1,0 +1,171 @@
+.hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #fff, #fff7f9);
+  padding-top: 120px;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+.tag {
+  display: inline-block;
+  background: #ffe9ef;
+  color: var(--primary);
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.heroContent h1 {
+  font-size: 4rem;
+  line-height: 1.15;
+  margin-bottom: 25px;
+}
+
+.heroContent h1 span {
+  color: var(--primary);
+}
+
+.heroContent p {
+  font-size: 1.1rem;
+  color: var(--gray);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.heroBtn {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.heroBtn:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .hero {
+    text-align: center;
+  }
+
+  .heroContent {
+    margin: auto;
+  }
+
+  .heroContent h1 {
+    font-size: 3rem;
+  }
+}
+/* ================= OUR STORY ================= */
+
+.story {
+  padding: 100px 0;
+}
+
+.storyWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.storyImage {
+  position: relative;
+}
+
+.storyImage img {
+  width: 100%;
+  border-radius: 28px;
+  display: block;
+  box-shadow: 0 25px 60px rgba(0,0,0,.12);
+}
+
+.experienceCard {
+  position: absolute;
+  right: -25px;
+  bottom: 30px;
+
+  background: rgba(255,255,255,.92);
+  backdrop-filter: blur(18px);
+
+  padding: 25px;
+  border-radius: 22px;
+
+  box-shadow: 0 20px 45px rgba(0,0,0,.12);
+}
+
+.experienceCard h2 {
+  color: var(--primary);
+  font-size: 2.4rem;
+}
+
+.storyContent h2 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.storyContent h2 span {
+  color: var(--primary);
+}
+
+.storyContent p {
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.sectionTag {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: #ffe9ef;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.storyStats {
+  display: flex;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.storyStats h3 {
+  color: var(--primary);
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.storyStats span {
+  color: var(--gray);
+}
+
+@media(max-width:992px){
+
+.storyWrapper{
+grid-template-columns:1fr;
+}
+
+.storyStats{
+justify-content:center;
+flex-wrap:wrap;
+text-align:center;
+}
+
+.storyContent{
+text-align:center;
+}
+
+.experienceCard{
+position:static;
+margin-top:20px;
+}
+}

@@ -1,0 +1,79 @@
+.testimonials{
+    padding:120px 0;
+    background:#fff;
+}
+
+.heading{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.heading span{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.heading h2{
+    font-size:3rem;
+    margin:18px 0;
+}
+
+.heading p{
+    max-width:650px;
+    margin:auto;
+    color:var(--gray);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:var(--shadow);
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.quote{
+    color:var(--primary);
+    font-size:2rem;
+    margin-bottom:20px;
+}
+
+.stars{
+    display:flex;
+    gap:6px;
+    color:#ffc107;
+    margin-bottom:20px;
+}
+
+.review{
+    color:var(--gray);
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.author h4{
+    margin-bottom:5px;
+}
+
+.author span{
+    color:var(--gray);
+    font-size:.9rem;
+}
+
+@media(max-width:992px){
+.grid{
+grid-template-columns:1fr;
+}
+}

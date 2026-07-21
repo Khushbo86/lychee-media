@@ -1,0 +1,51 @@
+.stats {
+  background: var(--primary);
+  padding: 100px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.card {
+  text-align: center;
+  color: white;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.12);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 34px;
+}
+
+.card h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: .85;
+}
+
+@media(max-width:992px){
+  .grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
