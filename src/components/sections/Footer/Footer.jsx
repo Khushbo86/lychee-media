@@ -61,7 +61,7 @@ const Footer = () => {
 
             <ul>
               <li>Ghaziabad, India</li>
-              <li>hello@lycheemedia.com</li>
+              <li>hello@lycheemedia.in</li>
               <li>+91 98765 43210</li>
             </ul>
           </div>

@@ -29,7 +29,7 @@ const ContactInfo = () => {
 
 <h3>Email</h3>
 
-<p>sales@lycheemedia.com.in</p>
+<p>sales@lycheemedia.in</p>
 
 </div>
 
