@@ -8,7 +8,6 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     setLoading(true);
 
     emailjs
@@ -19,13 +18,13 @@ const ContactForm = () => {
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        alert("✅ Message sent successfully!");
+        alert("✅ Thank you! We'll contact you shortly.");
         form.current.reset();
         setLoading(false);
       })
-      .catch((error) => {
-        console.error(error);
-        alert("❌ Failed to send message.");
+      .catch((err) => {
+        console.error(err);
+        alert("❌ Something went wrong.");
         setLoading(false);
       });
   };
@@ -36,45 +35,54 @@ const ContactForm = () => {
       onSubmit={sendEmail}
       className={styles.form}
     >
-      <div className={styles.row}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-        />
+      <div className={styles.formHeading}>
+        <span>FREE CONSULTATION</span>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          required
-        />
+        <h3>Let's Grow Your Business 🚀</h3>
+
+        <p>
+          Fill in your details and our experts will
+          get back to you within 24 hours.
+        </p>
       </div>
 
-      <div className={styles.row}>
-        <input
-          type="text"
-          name="company"
-          placeholder="Company"
-        />
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
 
-        <input
-          type="text"
-          name="phone"
-          placeholder="Phone Number"
-        />
-      </div>
+      <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required
+      />
+
+      <input
+        type="text"
+        name="phone"
+        placeholder="Phone Number"
+      />
+
+      <input
+        type="text"
+        name="company"
+        placeholder="Company Name"
+      />
 
       <textarea
-        rows="6"
+        rows="4"
         name="message"
         placeholder="Tell us about your project..."
         required
-      ></textarea>
+      />
 
       <button type="submit">
-        {loading ? "Sending..." : "Send Message"}
+        {loading
+          ? "Sending..."
+          : "Submit Query"}
       </button>
     </form>
   );

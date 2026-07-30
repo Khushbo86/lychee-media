@@ -2,14 +2,14 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 100px;
+  padding: 120px 0 80px;
   background: linear-gradient(135deg, #ffffff, #fff9fa);
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 70px;
   align-items: center;
 }
 
@@ -18,10 +18,10 @@
 ========================= */
 
 .content h1 {
-  font-size: 4.2rem;
-  line-height: 1.1;
-  margin: 20px 0;
+  font-size: 4.5rem;
+  line-height: 1.05;
   font-weight: 800;
+  margin: 20px 0;
 }
 
 .content h1 span {
@@ -30,14 +30,16 @@
 
 .content p {
   color: var(--gray);
-  margin-bottom: 35px;
+  font-size: 1.1rem;
   line-height: 1.8;
-  font-size: 1.05rem;
+  margin-bottom: 35px;
+  max-width: 620px;
 }
 
 .tag {
-  display: inline-block;
-  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 22px;
   background: #ffe9ef;
   border-radius: 999px;
   color: var(--primary);
@@ -52,11 +54,11 @@
 
 .primaryBtn,
 .secondaryBtn {
-  padding: 16px 34px;
+  padding: 16px 36px;
   border-radius: 999px;
   font-weight: 600;
+  transition: all .35s ease;
   cursor: pointer;
-  transition: 0.35s;
 }
 
 .primaryBtn {
@@ -67,6 +69,7 @@
 
 .primaryBtn:hover {
   transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(113, 8, 34, .25);
 }
 
 .secondaryBtn {
@@ -81,108 +84,119 @@
 }
 
 /* =========================
-      RIGHT DASHBOARD
+        HERO FORM
 ========================= */
 
-.dashboard {
+.formWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Chart Card */
+.formWrapper form {
+  width: 100%;
+  max-width: 470px;
 
-.chartCard {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,.95);
 
   backdrop-filter: blur(18px);
 
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(113,8,34,.08);
 
-  border-radius: 30px;
+  border-radius: 28px;
 
-  padding: 25px;
+  padding: 35px;
 
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 25px 70px rgba(0,0,0,.08);
 }
 
-.chartHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  margin-bottom: 20px;
-}
-
-.chartHeader h3 {
-  font-size: 1.3rem;
-}
-
-.chartHeader span {
+.formWrapper h3 {
   font-size: 2rem;
+  margin-bottom: 10px;
   color: var(--primary);
-  font-weight: 700;
 }
 
-/* KPI Cards */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.smallCard {
-  background: rgba(255, 255, 255, 0.85);
-
-  backdrop-filter: blur(15px);
-
-  border-radius: 22px;
-
-  padding: 24px;
-
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
-
-  transition: 0.35s;
-}
-
-.smallCard:hover {
-  transform: translateY(-6px);
-}
-
-.smallCard h2 {
-  color: var(--primary);
-  font-size: 2rem;
-  margin-bottom: 8px;
-}
-
-.smallCard p {
+.formWrapper p {
   color: #666;
+  margin-bottom: 25px;
+}
+
+.formWrapper input,
+.formWrapper textarea,
+.formWrapper select {
+  width: 100%;
+  margin-bottom: 18px;
+  padding: 15px 18px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  transition: .3s;
+}
+
+.formWrapper input:focus,
+.formWrapper textarea:focus,
+.formWrapper select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(113,8,34,.08);
+}
+
+.formWrapper textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.formWrapper button {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  padding: 16px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .35s;
+}
+
+.formWrapper button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(113,8,34,.25);
 }
 
 /* =========================
-      RESPONSIVE
+        RESPONSIVE
 ========================= */
 
 @media (max-width: 992px) {
+
   .wrapper {
     grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .content {
     text-align: center;
+  }
+
+  .content h1 {
+    font-size: 3.2rem;
+  }
+
+  .content p {
+    margin-inline: auto;
   }
 
   .buttons {
     justify-content: center;
   }
 
-  .content h1 {
-    font-size: 3rem;
+  .formWrapper {
+    width: 100%;
   }
 
-  .dashboard {
-    margin-top: 50px;
+  .formWrapper form {
+    max-width: 100%;
   }
 
-  .cards {
-    grid-template-columns: 1fr;
-  }
 }

@@ -1,6 +1,5 @@
 import styles from "./Contact.module.css";
 import ContactInfo from "./ContactInfo";
-import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
@@ -23,7 +22,6 @@ const Contact = () => {
 
         <div className={styles.contactWrapper}>
           <ContactInfo />
-          <ContactForm />
         </div>
       </div>
     </section>

@@ -1,26 +1,32 @@
 import styles from "./Portfolio.module.css";
 import PortfolioCard from "./PortfolioCard";
 
+// Import your local images
+import ecommerce from "../../../assets/ecommerce.webp";
+import fitness from "../../../assets/fitnessapp.webp";
+import restroombranding from "../../../assets/restroombranding.webp";
+import seo from "../../../assets/seo.webp";
+
 const projects = [
   {
     title: "E-Commerce Website",
     category: "Web Development",
-    image: "https://picsum.photos/600/500?random=1",
+    image: ecommerce,
   },
   {
-    title: "Restaurant Branding",
+    title: "Restroom Branding",
     category: "Brand Identity",
-    image: "https://picsum.photos/600/500?random=2",
+    image: restroombranding,
   },
   {
     title: "SEO Campaign",
     category: "Digital Marketing",
-    image: "https://picsum.photos/600/500?random=3",
+    image: seo,
   },
   {
     title: "Fitness App",
     category: "UI / UX Design",
-    image: "https://picsum.photos/600/500?random=4",
+    image: fitness,
   },
 ];
 

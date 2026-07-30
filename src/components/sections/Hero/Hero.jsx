@@ -1,5 +1,5 @@
 import HeroContent from "./HeroContent";
-import HeroDashboard from "./HeroDashboard";
+import ContactForm from "../Contact/ContactForm";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -7,7 +7,10 @@ const Hero = () => {
     <section id="home" className={styles.hero}>
       <div className={`container ${styles.wrapper}`}>
         <HeroContent />
-        <HeroDashboard />
+
+        <div className={styles.formWrapper}>
+          <ContactForm />
+        </div>
       </div>
     </section>
   );
